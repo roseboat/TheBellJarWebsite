@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>The Bell Jar Glasgow</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="author" content="Rosa Downing">
   <meta name="keywords" content="pub, restaurant, pub grub, Glasgow, south-side">
   <meta name="description" content="The Bell Jar is a pub and restaurant in the Southside of Glasgow.">
 
@@ -26,7 +25,6 @@
 
   <link href="lib/animate/animate.min.css" rel="stylesheet">
 
-
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -36,18 +34,20 @@
   <main id="main">
 
 
-    <!-- ***** NAVIGATION ***** -->
-
+    <!-- ************ -->
+    <!--     NAV     -->
+    <!-- ************ -->
 
     <section id="nav">
       <div class="nav">
-          <div class="col-lg-6">
-        <p class="nav-name">THE BELL JAR</p>
-      </div>
-      <div class="col-lg-6">
-      <p class="nav-description">A pub with grub</p>
-      <p class="nav-description">Southside, Glasgow</p>
-    </div>
+        <div class="col-lg-6">
+          <h1 class="wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.4s">THE BELL JAR</h1>
+        </div>
+        <div class="col-lg-6 nav-descript">
+          <p class="nav-description wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="1s">A pub with grub</p>
+          <p class="nav-description wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="1.1s">Glasgow, Scotland
+          </p>
+        </div>
 
       </div>
     </section>
@@ -56,33 +56,10 @@
     <!--     HERO     -->
     <!-- ************ -->
 
-    <section id="hero" class="parallax-window" data-parallax="scroll" data-image-src="../Bell%20Jar%20Website/img/bar.jpg">
-      <div class="hero wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
+    <section id="hero" class="parallax-window hero" data-parallax="scroll" data-image-src="../Bell%20Jar%20Website/img/bar.jpg" speed="0.5">
+      <div class="hero">
         <div class="container">
-          <div class="row hero-container">
-
-            <div class="col-lg-6 content order-lg-1 order-1 wow fadeIn">
-
-              <div class="hero-content">
-                <!-- <h2 class="title hero-text">Food and Drink in Glasgow's Southside</h2> -->
-
-                <div class="wow fadeIn" data-wow-delay="0.5s">
-<!-- 
-                  <p class="hero-text">
-                    This is a paragraph where you can briefly introduce The Bell Jar. You might want to say something
-                    about it being a pub. And having food. And being welcoming to children - but not dogs? I can't
-                    remember if you allow dogs or not in there. Anyways, this is where you can say stuff.
-                  </p> -->
-                </div>
-              </div>
-
-
-            </div>
-
-            <div class="col-lg-6 content order-lg-2 ">
-
-            </div>
-          </div>
+          <div class="arrow"></div>
         </div>
     </section>
 
@@ -99,13 +76,13 @@
         <div class="row container ">
 
           <div class="col-lg-6 menu wow fadeInLeft" data-wow-delay="0.3s">
-            <a href="../Bell%20Jar%20Website/img/food.png" data-toggle="lightbox" data-title="Food Menu"
+            <a href="../Bell%20Jar%20Website/img/food.png" data-toggle="lightbox" data-type="image" data-title="Food Menu"
               data-gallery="menu-gallery" data-width="1640">
               <img src="../Bell%20Jar%20Website/img/food.png" class="img-fluid">
             </a>
           </div>
           <div class="col-lg-6 menu wow fadeInRight" data-wow-delay="0.3s">
-            <a href="../Bell%20Jar%20Website/img/food.png" data-toggle="lightbox" data-title="Wine List"
+            <a href="../Bell%20Jar%20Website/img/food.png" data-toggle="lightbox" data-type="image" data-title="Wine List"
               data-gallery="menu-gallery" data-width="1640">
               <img src="../Bell%20Jar%20Website/img/food.png" class="img-fluid">
             </a>
@@ -139,6 +116,17 @@
             <p><b>Weds - Sat:</b> 12pm - 12pm</p>
 
           </div>
+    </section>
+
+    <!-- ************ -->
+    <!-- BOTTOM IMAGE -->
+    <!-- ************ -->
+
+    <section id="final-image" data-parallax="scroll" data-image-src="../Bell%20Jar%20Website/img/bar2.jpg">
+      <div class="container">
+
+
+      </div>
     </section>
 
 

@@ -1,13 +1,9 @@
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
 @font-face {
   font-family: "London Tube";
-  src: url("TUBE.eot?") format("eot"), url("TUBE.woff") format("woff"), url("TUBE.ttf") format("truetype"), url("TUBE.svg#London-Tube") format("svg");
+  src: url("../lib/fonts/TUBE.eot") format("eot"), url("../lib/fonts/TUBE.woff") format("woff"), url("../lib/fonts/TUBE.ttf") format("truetype"), url("TUBE.svg#London-Tube") format("svg");
   font-weight: normal;
   font-style: normal;
-}
-*{
-  margin:0;
-  padding:0;
 }
 
 body {
@@ -15,7 +11,8 @@ body {
   color: #1B2021;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16pt;
-  font-style: normal
+  font-style: normal;
+
 }
 
 a {
@@ -34,40 +31,43 @@ p {
   margin: 0;
 }
 
-h1,
+h1 {
+  font-family: 'London Tube';
+  color: #1B2021;
+  letter-spacing: 15px;
+  font-size: 14pt;
+  font-weight: 600;
+  margin: 0px;
+  text-align: center;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  /* font-family: 'Vollkorn', serif; */
   font-family: 'London Tube';
   font-size: 22pt;
   letter-spacing: 6.5px;
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: bold;
   margin: 0 0 20px 0;
   padding: 0
 }
 
- .hero{
+.hero {
   padding: 100px 0px 0px 0px;
-  /* background: url(../img/bar.jpg) center top no-repeat; */
-  /* background-size: contain; */
   display: block;
-  margin:auto;
-  max-height:100%;
+  margin: auto;
+  max-height: 100%;
   max-width: 100%;
- }
+}
 
-
-
-.hero-text{
-  color:white;
-  text-decoration: underline;
-  text-decoration-color: #D4E6B5;
-  border-bottom-color: #D4E6B5;
-  border-radius: 5rem;
+#final-image {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .nav {
@@ -80,15 +80,7 @@ h6 {
   z-index: 999;
 }
 
-.nav-name {
-  font-family: 'London Tube';
-  color: #1B2021;
-  letter-spacing: 15px;
-  font-size: 14pt;
-  font-weight: 600;
-  margin: 0px;
-  text-align:center;
-}
+
 
 .nav-description {
   font-family: 'London Tube';
@@ -96,14 +88,59 @@ h6 {
   letter-spacing: 5px;
   font-size: 10pt;
   font-weight: 600;
- text-align: center;
+  text-align: center;
   margin: 0px;
 }
 
-.hero-content {
-  color: white;
-  padding: 80px 40px;
+.nav-descript {
+  padding-top: 10px;
 }
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  padding-bottom: 50px;
+  animation: arrow-movement 3s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+.arrow:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+
+.arrow:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
 .back-to-top {
   position: fixed;
@@ -125,7 +162,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #D4E6B5;
+  background: rgba(0, 0, 0, .7);
   opacity: 0.6;
   color: #fff
 }
@@ -161,46 +198,14 @@ a [data-toggle=lightbox] {
   text-align: center;
 }
 
-.img-fluid {
-  max-height: 650px;
-}
-
-
 .google-map {
-  min-height: 320px;
+  min-height: 280px;
 }
 
-.map{
+.map {
   margin: 0px;
   padding: 0px;
   width: 100%;
-}
-
-.cta-btn {
-  font-family: Lato, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 30px;
-  border-radius: 50px;
-  transition: .5s;
-  margin: 10px;
-  margin-top: 25px;
-  margin-bottom: 55px;
-  border: 2px solid #005eac;
-  color: #fff;
-  background: #005eac
-}
-
-.cta-btn:hover,
-.cta-btn:focus,
-.cta-btn:active {
-  background: #3c82b4;
-  border: 2px solid #3c82b4;
-  cursor: pointer;
-  -webkit-animation: pulse 1s;
-  animation: pulse 1s
 }
 
 #footer {
@@ -269,10 +274,9 @@ address {
     font-size: 20pt;
   }
 
-  /* .hero{ */
-    /* background: url(../img/bar.jpg) center top no-repeat;
-    background-size: cover; */
-  /* } */
+  .google-map {
+    min-height: 320px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -288,7 +292,7 @@ address {
   }
 
   .details-content {
-    padding: 30px;
+    padding: 30px 30px 30px 50px;
   }
 
   .social-links {
@@ -314,14 +318,18 @@ address {
 }
 
 
-@media (min-width: 990px){
-.nav-name {
-  text-align:left;
-}
+@media (min-width: 990px) {
+  .nav-name {
+    text-align: left;
+  }
 
-.nav-description{
-text-align: right;
-}
+  .nav-description {
+    text-align: right;
+  }
+
+  .nav-descript {
+    padding: 0px;
+  }
 }
 
 
