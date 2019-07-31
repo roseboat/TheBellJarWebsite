@@ -21,6 +21,15 @@ jQuery(document).ready(function ($) {
     }, 1500, 'easeInOutExpo');
     return false;
   });
+
+  // $(window).scroll(function() {
+  //   $(".parallax-mirror img").css({
+  //     'opacity': 1 - (($(this).scrollTop()) / 500)
+  //   });
+  // });
+  
+
+
 });
 
 $(document).on('click', '[data-toggle="lightbox"]', function (event) {
@@ -37,6 +46,5 @@ function set_body_height() {
   } else {
     $('.hero').height($(window).height());
   }
-
   $('#final-image').height($(window).height() / 2);
 }

@@ -31,7 +31,8 @@ p {
   margin: 0;
 }
 
-h1 {
+h1,
+.nav-name {
   font-family: 'London Tube';
   color: #1B2021;
   letter-spacing: 15px;
@@ -70,7 +71,11 @@ h6 {
   max-width: 100%;
 }
 
+
+
 .nav {
+  display: flex;
+  align-items: center;
   background: #fff;
   padding: 22px 40px;
   position: fixed;
@@ -79,8 +84,6 @@ h6 {
   width: 100%;
   z-index: 999;
 }
-
-
 
 .nav-description {
   font-family: 'London Tube';
@@ -191,10 +194,16 @@ a [data-toggle=lightbox] {
   background-color: #E7F1D6;
   color: #1B2021;
   padding: 40px;
+  margin: 0px;
+}
+
+.menus {
+  margin: 0px;
 }
 
 .menu {
-  padding: 20px;
+  padding-bottom: 20px;
+  margin: 0px;
   text-align: center;
 }
 
@@ -247,6 +256,7 @@ address {
   color: white;
 }
 
+
 .fab {
   padding: 10px;
   font-size: 25px;
@@ -276,6 +286,12 @@ address {
 
   .google-map {
     min-height: 320px;
+  }
+
+  .menu {
+    padding-top: 20px;
+    margin: 0px;
+    text-align: center;
   }
 }
 
