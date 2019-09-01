@@ -11,6 +11,10 @@ body {
     font-family: 'Roboto', sans-serif;
 	font-size: 10pt;
 	font-style: normal;
+	-webkit-transition: display 1.5s ease-out;
+	-moz-transition: display 1.5s ease-out;
+	-o-transition: display 1.5s ease-out;	
+	transition: display 1.5s ease-out;
 }
 
 a {
@@ -104,12 +108,14 @@ h6 {
 	padding-top: 10px;
 }
 
+
 .hero {
 	padding: 100px 0px 0px 0px;
 	display: block;
 	margin: auto;
 	max-height: 100%;
 	max-width: 100%;
+
 }
 
 .arrow {
@@ -194,6 +200,7 @@ a [data-toggle=lightbox] {
   text-align: center;
   display: flex;
   align-items: center;
+  
 }
 
 #menus, #details{
