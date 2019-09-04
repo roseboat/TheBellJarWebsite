@@ -119,13 +119,13 @@ h6 {
 }
 
 .arrow {
+	display:block;
 	opacity: 0;
 	position: absolute;
-	left: 46%;
-	bottom: 0;
-	padding-bottom: 50px;
+	text-align:center;
+	width: 60px;
 	animation: arrow-movement 3s ease-in-out infinite;
-
+	opacity: 1;
 }
 
 .arrow:before,

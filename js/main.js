@@ -12,11 +12,15 @@ jQuery(document).ready(function($) {
 
     $(this).scrollTop(0);  
     new WOW().init();
-    $(window).bind('resize', set_body_height);
+    // $(window).bind('resize', set_body_height);
+
+    $(window).on('resize', function(){
+set_body_height();
+    });
     set_body_height();
 
     $('.nav-description').fadeIn('30000');
-    $('.nav-descript').fadeIn('slow');
+    $('.nav-descript').fadeIn('slow');  
     
         var lastScrollTop = 0;
         $(window).scroll(function(event){
@@ -101,6 +105,14 @@ function set_body_height() {
 
     $('.hero').height(windowHeight - 50);
     $('#final-image').height(windowHeight - (windowHeight / 2));
+
+    var arrowPosition = (windowHeight - 70);
+    var widthOfArrow = 30 * Math.abs(Math.cos(45));
+    var arrowLeft = (windowWidth / 2) - (widthOfArrow);
+    $('.arrow').css('top', arrowPosition + "px");
+    $('.arrow').css('left', arrowLeft + "px");
+    $('.arrow').css('opacity', 0);
+
     if (windowHeight > 991) {
         $('#menus').height(windowHeight - 250);
         $('#details').height(windowHeight - 250);
